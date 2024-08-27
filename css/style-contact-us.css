@@ -67,9 +67,14 @@ a {
     text-decoration: none;
 }
 
+
+
+
+
+
 /* 頁首區 */
 #container-topbar {
-    z-index: 1;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,7 +206,8 @@ a {
     gap: 2rem;
     flex-wrap: wrap;
     position: relative;
-
+    overflow-x: hidden;
+    /* 隱藏雲的水平溢出 */
 }
 
 
@@ -327,7 +333,8 @@ a {
     width: 100%;
     /* 80%改為100%*/
     max-width: 450px;
-    padding: 0.5px;
+    max-height: 200px;
+    padding: 1px 12px;
 }
 
 #form-contact small {
@@ -370,7 +377,7 @@ a {
     right: -5vw;
     /* -50px */
     /* 使其向右偏移px以出框改用vw相對位置*/
-    top: 90vh;
+    top: 15vh;
     /* 520px */
     /* 使其向上偏移px以出框改用vh相對位置 */
     /* 將容器對齊到右側邊緣 */
@@ -384,10 +391,10 @@ a {
 .clowd_w {
     position: absolute;
     /* 絕對定位 */
-    left: -10vw;
+    left: -5vw;
     /* -50px */
     /* 使其向左偏移50px以出框改用vw相對位置 */
-    bottom: -80vh;
+    bottom: 40vh;
     /* -400px; */
     /* 使其向下偏移px以出框改用vh */
     /* 將容器對齊到左側邊緣 */
@@ -398,7 +405,7 @@ a {
 
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
 
     .clowd_r,
     .clowd_w {
