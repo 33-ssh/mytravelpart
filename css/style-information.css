@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+
+
+:root {
+    --primary-1: #262220;
+    --primary-2: #A62014;
+    --primary-3: #A15C38;
+    --primary-4: #FFFFFF;
+    --secondary-1: #F7F1F0;
+    --secondary-2: #C3A6A0;
+    --third-1: #6E6E6E;
+    --third-2: #E4E4E4;
+
+    /* 文字 */
+    /*NOTO SANS TC :Regular400/Medium 500  */
+    /*Noto Serif TC:SemiBold 600/Black 900  */
+}
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    text-decoration: none;
+}
+
+/* 頁首區 */
+#container-topbar {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    padding: 16px 24px 20px;
+    background-color: var(--primary-4);
+
+
+}
+
+/* logo區 */
+.logo {
+    width: 196px;
+    height: auto;
+}
+
+
+/* 導覽列 */
+#container-topbar .navigation {
+    display: flex;
+    align-items: center;
+
+}
+
+#container-topbar .navigation .menu {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5vw;
+}
+
+#container-topbar .navigation .menu li {
+    border-right: solid 1px var(--primary-3);
+    padding: 0 24px 0 24px;
+}
+
+
+#container-topbar .navigation .menu li:last-child {
+    border-right: none;
+}
+
+/* rwd響應式 */
+@media screen and (max-width:768px) {
+    #container-topbar .navigation .menu {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #container-topbar .navigation .menu li {
+        padding: 12px 0;
+        border-right: none;
+    }
+}
+
+
+
+#container-topbar .navigation .menu a {
+    color: var(--primary-3);
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-bottom: solid 2px transparent;
+}
+
+#container-topbar .navigation .menu a:hover {
+    border-bottom: solid 2px var(--primary-3);
+    transition: 0.35s ease-in-out;
+    padding-bottom: 6px;
+}
+
+#container-topbar .navigation .icon {
+    display: flex;
+    align-items: center;
+}
+
+#container-topbar .navigation .icon a img {
+    padding: 0 24px 0 0;
+}
+
+
+/* banner區  */
+#contact-us {
+    width: 100%;
+    height: 400px;
+    /* 你可以根據需要調整高度 */
+    background-image: url('../images/information/image-bn-ifm.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* 設置文字顏色 */
+
+}
+
+#contact-us .title h2 {
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.2rem;
+    /* 調整字體大小 */
+    letter-spacing: 0.6rem;
+    /* 調整字距 */
+    line-height: 0.6rem;
+    /* 調整字高 */
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+/* banner區 */
+
+
+
+/* 頁尾區 */
+footer {
+
+    background-color: var(--primary-2);
+    color: var(--primary-4);
+    padding: 20px;
+    /* 添加 padding 以確保内容可建 */
+    margin-top: auto;
+    /* 確保 footer 在頁面底部 */
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+footer .navigation {
+    padding: 0 70px 0 0;
+}
+
+footer .navigation .menu-list {
+    display: flex;
+    justify-content: center;
+}
+
+footer .menu {
+    padding: 10px 50px;
+    opacity: 0.8rem;
+}
+
+footer .navigation h2 {
+    border-bottom: solid 1px var(--primary-4);
+}
+
+
+footer .menu .submenu {
+    padding: 10px 0;
+}
+
+footer .menu .submenu a {
+    color: var(--primary-4);
+}
+
+footer .submenu-icon {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+footer .small {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    opacity: 0.9;
+}

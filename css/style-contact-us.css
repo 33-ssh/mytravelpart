@@ -1,0 +1,463 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+
+
+:root {
+    --primary-1: #262220;
+    --primary-2: #A62014;
+    --primary-3: #A15C38;
+    --primary-4: #FFFFFF;
+    --secondary-1: #F7F1F0;
+    --secondary-2: #C3A6A0;
+    --third-1: #6E6E6E;
+    --third-2: #E4E4E4;
+
+    /* 文字 */
+    /*NOTO SANS TC :Regular400/Medium 500  */
+    /*Noto Serif TC:SemiBold 600/Black 900  */
+}
+
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+    
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    text-decoration: none;
+}
+
+/* 頁首區 */
+#container-topbar {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    padding: 16px 24px 20px;
+    background-color: var(--primary-4);
+
+
+}
+
+/* logo區 */
+.logo {
+    width: 196px;
+    height: auto;
+}
+
+
+/* 導覽列 */
+#container-topbar .navigation {
+    display: flex;
+    align-items: center;
+
+}
+
+#container-topbar .navigation .menu {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5vw;
+}
+
+#container-topbar .navigation .menu li {
+    border-right: solid 1px var(--primary-3);
+    padding: 0 24px 0 24px;
+}
+
+
+#container-topbar .navigation .menu li:last-child {
+    border-right: none;
+}
+
+/* rwd響應式 */
+@media screen and (max-width:768px) {
+    #container-topbar .navigation .menu {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #container-topbar .navigation .menu li {
+        padding: 12px 0;
+        border-right: none;
+    }
+}
+
+
+
+#container-topbar .navigation .menu a {
+    color: var(--primary-3);
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-bottom: solid 2px transparent;
+}
+
+#container-topbar .navigation .menu a:hover {
+    border-bottom: solid 2px var(--primary-3);
+    transition: 0.35s ease-in-out;
+    padding-bottom: 6px;
+}
+
+#container-topbar .navigation .icon {
+    display: flex;
+    align-items: center;
+}
+
+#container-topbar .navigation .icon a img {
+    padding: 0 24px 0 0;
+}
+
+
+/* banner區  */
+
+#contact-us {
+    width: 100%;
+    height: 400px;
+    /* 你可以根據需要調整高度 */
+    background-image: url('../images/contact-us/image-bn-contact.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* 設置文字顏色 */
+
+}
+
+#contact-us .title h2 {
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.2rem;
+    /* 調整字體大小 */
+    letter-spacing: 0.6rem;
+    /* 調整字距 */
+    line-height: 0.6rem;
+    /* 調整字高 */
+    text-align: center;
+    margin: 0;
+}
+
+/* 內容區 */
+
+#content {
+    z-index: 2;
+    padding: 3rem 1rem;
+    /* 原先為padding-top:3rem */
+    display: flex;
+    flex-direction: row;
+    /* 保持主要內容的水平布局 */
+    justify-content: center;
+    /* space-around使左右兩欄之間有間距改為將內容置中 */
+    background-color: var(--secondary-1);
+    gap: 2rem;
+    /* 增加 col-1 和 col-2 之間的間距 */
+    /* 調整內容區的間距 */
+    /* padding: 2rem; */
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    /* 使左右內容之間留有距離 */
+    max-width: 1200px;
+    /* 使左右內容之間留有距離 */
+    margin: 0 auto;
+    /* 置中 */
+    padding: 0 80px;
+    /* 添加一些內邊距來保持內容不會直接貼邊 */
+    flex-direction: row;
+    /* 保持box内的列布局 */
+    width: 100%;
+    gap: 2rem;
+    /* 给列間增加間距*/
+}
+
+
+.col-1,
+.col-2 {
+    flex: 1;
+    /* 右側内容占據可用空間 */
+    min-width: 300px;
+    /* 防止列在小螢幕上變得太窄 */
+    max-width: 500px;
+    /* 根據需要調整 */
+    margin: 0 10px;
+    /*  調整左右元素之間的距離 */
+}
+
+@media screen and (max-width: 768px) {
+    #content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .col-1,
+    .col-2 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.text h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+    /* 調整字距 */
+    line-height: 3rem;
+    /* 調整字高 */
+}
+
+.text address {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 2rem;
+    /* 調整字高 */
+    margin-bottom: 40px;
+
+}
+
+
+
+
+#form-contact {
+    display: flex;
+    flex-direction: column;
+    /* 讓表單元素垂直排列 */
+    gap: 1rem;
+    /* 添加表單元素之間的間距 */
+    width: 100%;
+    /* 確保表單占滿所在的列 */
+
+}
+
+#form-contact label {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 2rem;
+    /* 調整字高 */
+
+}
+
+#form-contact input,
+#form-contact textarea {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 2rem;
+    /* 調整字高 */
+    padding: 8px;
+    color: var(--third-1);
+    font-size: 0.8rem;
+    border: 0.1px solid var(--third-1);
+    border-radius: 20px;
+    /* 考慮視窗大小進行欄位寬度調整 */
+    width: 100%;
+    /* 80%改為100%*/
+    max-width: 450px;
+    padding: 0.5px;
+}
+
+#form-contact small {
+    font-size: .8rem;
+    color: var(--third-1);
+    padding: 5px 1px;
+}
+
+#btn__contact--submit {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 2rem;
+    /* 調整字高 */
+    margin: 28px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    color: var(--primary-2);
+    background-color: transparent;
+    border: 0.5px solid var(--primary-2);
+    border-radius: 99px;
+    cursor: pointer;
+    /* 改變鼠標樣式 */
+    align-self: center;
+    /* margin: 0 auto; */
+}
+
+#btn__contact--submit:hover {
+    color: var(--primary-4);
+    background-color: var(--primary-2);
+}
+
+/* 裝飾雲 */
+.clowd_r {
+    position: absolute;
+    /* 絕對定位 */
+    right: -5vw;
+    /* -50px */
+    /* 使其向右偏移px以出框改用vw相對位置*/
+    top: 90vh;
+    /* 520px */
+    /* 使其向上偏移px以出框改用vh相對位置 */
+    /* 將容器對齊到右側邊緣 */
+    /* 根據需要調整垂直位置 */
+    width: auto;
+    /* 根據需要調整寬度 */
+    height: auto;
+    /* 根據需要調整高度 */
+}
+
+.clowd_w {
+    position: absolute;
+    /* 絕對定位 */
+    left: -10vw;
+    /* -50px */
+    /* 使其向左偏移50px以出框改用vw相對位置 */
+    bottom: -80vh;
+    /* -400px; */
+    /* 使其向下偏移px以出框改用vh */
+    /* 將容器對齊到左側邊緣 */
+    width: auto;
+    /* 根據需要調整寬度 */
+    height: auto;
+    /* 根據需要調整高度 */
+
+}
+
+@media (max-width: 1440px) {
+
+    .clowd_r,
+    .clowd_w {
+        display: none;
+    }
+}
+
+/* 頁尾區 */
+footer {
+
+    background-color: var(--primary-2);
+    color: var(--primary-4);
+    padding: 20px;
+    /* 添加 padding 以確保内容可建 */
+    margin-top: auto;
+    /* 確保 footer 在頁面底部 */
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+footer .navigation {
+    padding: 0 70px 0 0;
+}
+
+footer .navigation .menu-list {
+    display: flex;
+    justify-content: center;
+}
+
+footer .menu {
+    padding: 10px 50px;
+    opacity: 0.8rem;
+}
+
+footer .navigation h2 {
+    border-bottom: solid 1px var(--primary-4);
+}
+
+
+footer .menu .submenu {
+    padding: 10px 0;
+}
+
+footer .menu .submenu a {
+    color: var(--primary-4);
+}
+
+footer .submenu-icon {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+footer .small {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    opacity: 0.9;
+}
