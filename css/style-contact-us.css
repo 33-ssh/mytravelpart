@@ -135,7 +135,7 @@ a {
 #container-topbar .navigation .menu a {
     color: var(--primary-3);
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border-bottom: solid 2px transparent;
 }
 

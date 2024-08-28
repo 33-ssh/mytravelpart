@@ -70,21 +70,38 @@ a {
 #gotop {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 260px;
     z-index: 999;
 
     width: 50px;
     height: 50px;
     /* 新增 */
     /* display: none; */
-    background-color: var(--primary-4);
+    background-color: transparent;
     border-radius: 50%;
     padding: 5px;
 
-    cursor: pointer; /* 游標樣式:手指 */
+    cursor: pointer;
+    /* 游標樣式:手指 */
 }
 
+#butler {
+    position: fixed;
+    right: 20px;
+    bottom: 320px;
+    z-index: 998;
 
+    width: 50px;
+    height: 50px;
+    /* 新增 */
+    /* display: none; */
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+
+    cursor: pointer;
+    /* 游標樣式:手指 */
+}
 
 
 /* 頁首區 */
@@ -150,7 +167,7 @@ a {
 #container-topbar .navigation .menu a {
     color: var(--primary-3);
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border-bottom: solid 2px transparent;
 }
 
@@ -171,7 +188,7 @@ a {
 
 
 /* banner區  */
-#contact-us {
+#information {
     width: 100%;
     height: 400px;
     /* 你可以根據需要調整高度 */
@@ -181,14 +198,15 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--primary-4);
     /* 設置文字顏色 */
 
 }
 
-#contact-us .title h2 {
+#information .title h2 {
     font-family: "Noto Serif TC", serif;
     font-optical-sizing: auto;
+    /* 根据文本的大小自动调整字体*/
     font-weight: 900;
     font-style: normal;
     font-size: 2.2rem;
@@ -201,12 +219,123 @@ a {
     margin: 0;
 }
 
-
-
-
 /* 內容區 */
+.content-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 水平置中 */
+    align-items: center;
+    /* 垂直置中 */
+    flex-direction: column;
+    /* 若內容為垂直排列 */
+    text-align: center;
+    /* 讓文字在容器內水平居中 */
+    padding: 20px;
+    /* 添加内邊距避免内容貼邊 */
+    background-color: var(--secondary-1);
+}
 
+/* 为  .content-section 内的 h3 和 h4 添加样式 */
 
+.content-section h3 {
+    font-family: "Noto Sans TC";
+    font-optical-sizing: auto;
+    /* 根据文本的大小自动调整字体*/
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 0.6rem;
+    /* 調整字高 */
+    text-align: center;
+    margin: 20px auto;
+    /* 根据需要调整外边距 */
+    font-size: 1.5rem;
+    /* 根据需要调整字体大小 */
+    color: var(--primary-2);
+
+}
+
+.content-section h4 {
+    font-family: "Noto Sans TC";
+    font-optical-sizing: auto;
+    /* 根据文本的大小自动调整字体*/
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 0.6rem;
+    /* 調整字高 */
+    text-align: left;
+    margin: 25px auto 15px;
+    /* 上边距25px，下边距15px，水平居中 */
+    font-size: 1.2rem;
+    /* 根据需要调整字体大小 */
+    color: var(--primary-1);
+}
+
+/* 讓列表內容置中 */
+.content-section ul {
+    font-family: "Noto Sans TC";
+    font-optical-sizing: auto;
+    /* 根据文本的大小自动调整字体*/
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 0.6rem;
+    /* 調整字高 */
+    padding-left: 40px;
+    /* 添加适当的左内边距以显示黑点 */
+    margin-left: 0;
+    /* 移除默認的左外邊距 */
+    text-align: left;
+    list-style-type: disc;
+    /* 确保显示黑点 */
+}
+
+.content-section ol {
+    font-family: "Noto Sans TC";
+    font-optical-sizing: auto;
+    /* 根据文本的大小自动调整字体*/
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 1rem;
+    /* 調整字高 */
+    padding-left: 40px;
+    /* 添加适当的左内边距以显數字 */
+    margin-left: 0;
+    /* 移除默認的左外邊距 */
+    text-align: left;
+    list-style-type: decimal;
+    /* 确保显示数字 */
+}
+
+.content-section li {
+    font-family: "Noto Sans TC";
+    font-optical-sizing: auto;
+    /* 根据文本的大小自动调整字体*/
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    /* 調整字距 */
+    line-height: 1.5rem;
+    /* 調整字高 */
+    text-align: left;
+    /* 确保列表項的文字居中 */
+    margin: 0 auto;
+    /* 置中列表項 */
+}
+
+.content-section li  .after-br {
+    /* display: block; */
+    margin-top: 10px; /* 控制间距 */
+    margin-left: 90px; /* 向右移动20px，您可以调整这个值 */
+    line-height: 0.5; /* 控制行高 */
+}
 
 /* 頁尾區 */
 footer {
