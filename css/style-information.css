@@ -77,7 +77,7 @@ a {
     height: 50px;
     /* 新增 */
     /* display: none; */
-    background-color: var(--primary-4);
+    background-color: var(--secondary-1);
     border-radius: 50%;
     padding: 5px;
 
@@ -95,7 +95,7 @@ a {
     height: 50px;
     /* 新增 */
     /* display: none; */
-    background-color: var(--primary-4);
+    background-color: var(--secondary-1);
     border-radius: 50%;
     padding: 5px;
 
@@ -204,11 +204,11 @@ main {
     background-image: url('../images/information/image-bn-ifm.jpg');
     background-size: cover;
     background-position: center center;
+    opacity: 0.9; /* 设置透明度为90% */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-4);
-    /* 設置文字顏色 */
+
 
 }
 
@@ -226,7 +226,13 @@ main {
     /* 調整字高 */
     text-align: center;
     margin: 0;
+    color: var(--primary-4);
+    /* 設置文字顏色 */
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    /* 設置文字陰影 */
 }
+
+/* 內容區 */
 
 /* 分隔符圖片調整 */
 .divider-image {
@@ -237,7 +243,7 @@ main {
 }
 
 
-/* 內容區 */
+/* 區塊 */
 .content-section {
     width: 100%;
     display: flex;
@@ -264,7 +270,7 @@ main {
     font-style: normal;
     letter-spacing: 0.2rem;
     /* 調整字距 */
-    line-height: 0.6rem;
+    line-height: 1.5rem;
     /* 調整字高 */
     text-align: center;
     margin: 20px auto;
@@ -280,11 +286,12 @@ main {
 }
 
 .tips .section-content {
-    margin-right: 80px;
+    margin-right: 40px;
 }
 
 .cultural-guide .section-content {
     margin-right: 40px;
+    margin-bottom: 5%;
 }
 
 

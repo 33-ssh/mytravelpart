@@ -51,7 +51,7 @@ h6 {
 ul,
 ol {
     list-style: none;
-    
+
 }
 
 /* 重置圖片 */
@@ -167,8 +167,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    /* 設置文字顏色 */
+
 
 }
 
@@ -185,6 +184,10 @@ a {
     /* 調整字高 */
     text-align: center;
     margin: 0;
+    color: var(--primary-4);
+    /* 設置文字顏色 */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* 設置文字陰影 */
 }
 
 /* 內容區 */
@@ -246,19 +249,7 @@ a {
     /*  調整左右元素之間的距離 */
 }
 
-@media screen and (max-width: 768px) {
-    #content {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
 
-    .col-1,
-    .col-2 {
-        width: 100%;
-        max-width: 100%;
-    }
-}
 
 .text h1 {
     font-family: 'Noto Sans TC', sans-serif;
@@ -370,6 +361,48 @@ a {
     background-color: var(--primary-2);
 }
 
+@media screen and (max-width: 972px) {
+    #content {
+        flex-direction: column;
+        align-items: center;/* 确保所有内容在交叉轴上居中 */
+        gap: 2rem;
+
+    }
+    .box {
+        flex-direction: column; /* 确保box也是垂直排列 */
+        justify-content: center;
+        width: 100%; /* 确保box占满整个容器宽度 */
+        padding: 0; /* 移除不必要的内边距，以免影响布局 */
+        align-items: center; /* 添加此属性以确保box内的所有元素居中 */
+    }
+
+    #content .col-1,
+    #content .col-2 {
+        width: 100%;
+        max-width: none; /* 移除最大宽度限制 */
+        margin: 0; /* 重置外边距，确保对齐；去除外边距以避免布局偏移 */
+        align-items: center; /* 添加此属性以确保列内元素居中 */
+        display: flex;
+        flex-direction: column; /* 确保列内元素垂直排列 */
+
+    }
+
+    #form-contact,
+    #btn__contact--submit { /* 确保表单和按钮居中 */
+        width: 100%; /* 表单宽度调整为100% */
+        align-items: center; /* 居中表单内的所有元素 */
+        justify-content: center; /* 对齐按钮和表单元素 */
+        display: flex;
+        flex-direction: column;
+    }
+
+    #btn__contact--submit {
+        align-self: center; /* 使按钮自身在容器中居中 */
+        width: auto; /* 如果需要，调整按钮宽度 */
+        margin-top: 1rem; /* 为按钮添加顶部外边距 */
+    }
+}
+
 /* 裝飾雲 */
 .clowd_r {
     position: absolute;
@@ -405,7 +438,7 @@ a {
 
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1370px) {
 
     .clowd_r,
     .clowd_w {

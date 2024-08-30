@@ -6,32 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>神火旅遊</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./css/style-tpdi.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 自訂的css -->
+    <link rel="stylesheet" href="./css/style-tdi.css">
 </head>
 
 <body>
     <header>
-        <h2>好友樂悠遊之旅</h2>
-        <h2>京阪神三天兩夜詳細行程</h2>
+        <div class="header-content">
+            <img src="./images/logo/logo-union-linear.svg" alt="神火旅遊 Logo">
+            <address>
+                <p>地址: 台北市中正區一段條條大路68號</p>
+                <p>電話: 02-3322-2778 <strong>|</strong> 傳真: 02-3322-2778</p>
+            </address>
+            <h2>好友樂悠遊之旅</h2>
+            <h2>京阪神三天兩夜詳細行程</h2>
+            <button class="print-button" onclick="window.print()">列印下載</button>
+        </div>
     </header>
+    <!-- 內容區 -->
     <div class="container">
         <!-- 第一天：大阪 -->
-        <section class="section">
+        <section class="section-1">
             <h3>第一天：大阪</h3>
 
             <!-- 上午 -->
-            <div class="section">
+            <div class="section-morning-1">
                 <h4>上午</h4>
                 <ul>
                     <li>大阪城公園</li>
-                    <li>介紹：大阪城是日本著名的歷史城堡，周圍的公園四季皆美，適合散步和拍照。</li>
+                    <li class="indent">介紹：大阪城是日本著名的歷史城堡，周圍的公園四季皆美，適合散步和拍照。</li>
                     <li>交通：從關西機場乘坐南海電鐵到南海難波站，轉乘大阪地鐵到大阪城公園站，總共約1小時。</li>
                     <li>建議活動：參觀天守閣，了解大阪的歷史和文化。</li>
                 </ul>
             </div>
 
             <!-- 中午 -->
-            <div class="section">
+            <div class="day-1">
                 <h4>中午</h4>
                 <ul>
                     <li>道頓堀</li>
@@ -42,7 +53,7 @@
             </div>
 
             <!-- 下午 -->
-            <div class="section">
+            <div class="section-afternoon-1">
                 <h4>下午</h4>
                 <ul>
                     <li>心齋橋和美國村</li>
@@ -53,7 +64,7 @@
             </div>
 
             <!-- 晚上 -->
-            <div class="section">
+            <div class="section-evening-1">
                 <h4>晚上</h4>
                 <ul>
                     <li>梅田Sky Building</li>
@@ -65,7 +76,7 @@
             </div>
 
             <!-- 住宿 -->
-            <div class="section">
+            <div class="section-room-1">
                 <h4>住宿</h4>
                 <ul>
                     <li>推薦酒店：大阪瑞士酒店、日航大阪酒店、希爾頓大阪酒店。</li>
@@ -74,11 +85,11 @@
         </section>
 
         <!-- 第二天：京都 -->
-        <section class="section">
+        <section class="day-2">
             <h3>第二天：京都</h3>
 
             <!-- 上午 -->
-            <div class="section">
+            <div class="section-morning-2">
                 <h4>上午</h4>
                 <ul>
                     <li>伏見稻荷大社</li>
@@ -89,7 +100,7 @@
             </div>
 
             <!-- 中午 -->
-            <div class="section">
+            <div class="section-noon-2">
                 <h4>中午</h4>
                 <ul>
                     <li>錦市場</li>
@@ -100,7 +111,7 @@
             </div>
 
             <!-- 下午 -->
-            <div class="section">
+            <div class="section-afternoon">
                 <h4>下午</h4>
                 <ul>
                     <li>二条城</li>
@@ -111,7 +122,7 @@
             </div>
 
             <!-- 晚上 -->
-            <div class="section">
+            <div class="section-evening">
                 <h4>晚上</h4>
                 <ul>
                     <li>祇園</li>
@@ -122,7 +133,7 @@
             </div>
 
             <!-- 住宿 -->
-            <div class="section">
+            <div class="section-room">
                 <h4>住宿</h4>
                 <ul>
                     <li>推薦酒店或旅館：京都格蘭比亞酒店、俵屋旅館、星之居。</li>
@@ -131,11 +142,11 @@
         </section>
 
         <!-- 第三天：神戶 -->
-        <section class="section">
+        <section class="day-3">
             <h3>第三天：神戶</h3>
 
             <!-- 上午 -->
-            <div class="section">
+            <div class="section-morning-3">
                 <h4>上午</h4>
                 <ul>
                     <li>北野異人館街</li>
@@ -146,7 +157,7 @@
             </div>
 
             <!-- 中午 -->
-            <div class="section">
+            <div class="section-noon-3">
                 <h4>中午</h4>
                 <ul>
                     <li>神戶港和摩耶山</li>
@@ -156,3 +167,18 @@
                 </ul>
 
             </div>
+        </section>
+    </div>
+
+    <footer>
+        </div>
+        <div id="butler"><img src="./images/butler.svg" alt="小管家按鈕"></div>
+        <div id="gotop"><img src="./images/top.svg" alt="回到頂部按鈕"></div>
+        <!-- <a  href="#" id="gotop"><img src="./images/top.svg" alt="回到頂部按鈕"></div> -->
+    </footer>
+
+    <!-- 自訂的JS，一定要寫在最下面，要在最後執行-->
+    <script src="./js/script-inf.js"></script>
+</body>
+
+</html>
