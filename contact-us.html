@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>神火旅遊</title>
     <link rel="icon" href="./favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 自訂的css -->
     <link rel="stylesheet" href="./css/style-contact-us.css">
 </head>
 
@@ -14,22 +16,29 @@
     <header id="container-topbar">
         <!-- logo區 -->
         <h1 class="logo">
-            <a href="#"></a><img src="./images/logo/logo-union-linear.svg" alt="神火旅遊logo">
+            <a href="#"></a><img src="./images/logo/logo-linear.svg" alt="神火旅遊logo">
         </h1>
+
+
         <!-- 導覽列 -->
         <nav class="navigation">
-            <ul class="menu">
-                <li><a href="#">主題行程</a></li>
-                <li><a href="#">自由規劃</a></li>
-                <li><a href="./information.html">旅遊資訊</a></li>
-                <li><a href="./contact-us.html">聯絡我們</a></li>
-            </ul>
-            <ul class="icon">
-                <li><a class="icon-brown-shoppingcar" href="#"><img src="./images/icon/icon-brown-shoppingcar.svg"
-                            alt="購物車"></a></li>
-                <li><a class="icon-brown-member" href="#"><img src="./images/icon/icon-brown-member.svg" alt="會員"></a>
-                </li>
-            </ul>
+            <!-- 折疊菜單圖標 -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+                <ul class="menu">
+                    <li><a href="#">主題行程</a></li>
+                    <li><a href="#">自由規劃</a></li>
+                    <li><a href="./information.html">旅遊資訊</a></li>
+                    <li><a href="./contact-us.html">聯絡我們</a></li>
+                </ul>
+                <ul class="icon">
+                    <li><a class="icon-brown-shoppingcar" href="#"><img
+                                src="./images/icon/public/icon-b-shoppingcar.svg" alt="購物車"></a></li>
+                    <li><a class="icon-brown-member" href="#"><img src="./images/icon/public/icon-b-member.svg"
+                                alt="會員"></a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -87,8 +96,8 @@
 
             <!-- 裝飾雲 -->
             <div class="cloud-container">
-                <div class="clowd_r"><img src="./images/icon/ctu/icon-ctu-red-cloud.svg" alt="裝飾紅雲"></div>
-                <div class="clowd_w"><img src="./images/icon/ctu/icon-ctu-brown-cloud.svg" alt="裝飾棕雲"></div>
+                <div class="clowd_r"><img src="./images/icon/ctu/icon-ctu-r-cloud.svg" alt="裝飾紅雲"></div>
+                <div class="clowd_w"><img src="./images/icon/ctu/icon-ctu-b-cloud.svg" alt="裝飾棕雲"></div>
             </div>
         </section>
     </main>
@@ -99,10 +108,12 @@
         <div>
             <!-- logo -->
             <h1 class="logo">
-                <a href="./index.html">
-                    <img src="./images/logo/logo-union-white.svg" alt="">
+                <a href="#">
+                    <img src="./images/logo/logo-white.svg" alt="logo">
                 </a>
             </h1>
+
+
 
             <nav class="navigation">
                 <ul class="menu-list">
@@ -131,7 +142,7 @@
                             <li><a href="#">主題行程</a></li>
                             <li><a href="#">自由規劃</a></li>
                             <li><a href="#">旅遊資訊</a></li>
-                            <li><a href="#">連絡我們</a></li>
+                            <li><a href="#">聯絡我們</a></li>
                             <li><a href="#">會員登入</a></li>
                         </ul>
                     </li>
@@ -139,10 +150,10 @@
                         <h2>Follow us</h2>
                         <ul class="submenu-icon">
                             <li>
-                                <a href=""><img src="./images/icon/icon-fb.svg" alt=""></a>
+                                <a href=""><img src="./images/icon/public/icon-fb.svg" alt="fb"></a>
                             </li>
                             <li>
-                                <a href=""><img src="./images/icon/icon-line.svg" alt=""></a>
+                                <a href=""><img src="./images/icon/public/icon-line.svg" alt="line"></a>
                             </li>
                         </ul>
                     </li>
@@ -153,6 +164,9 @@
             <small>版權所有 &copy; 2024 神火旅遊</small>
         </div>
     </footer>
+
+    <!-- 自訂的JS，一定要寫在最下面，要在最後執行-->
+    <script src="./js/script-ctu-inf-itn.js"></script>
 </body>
 
 </html>
